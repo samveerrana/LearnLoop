@@ -1,0 +1,32 @@
+{
+  "passed": false,
+  "checks": {
+    "real_approximately_20b_reference": false,
+    "reference_identity_matches_manifest": true,
+    "official_reference_provenance": true,
+    "all_raw_runs_independently_audited": true,
+    "same_frozen_suite_hash_and_size": true,
+    "candidate_matches_or_beats_reference": true,
+    "no_category_regressions_vs_base": true,
+    "all_framework_capabilities_verified": true,
+    "all_required_features_invoked_in_candidate": false,
+    "weight_rewrite_has_heldout_gain": true
+  },
+  "scores": {
+    "base_4b": 52,
+    "candidate_4b": 75,
+    "reference": 42
+  },
+  "reference_parameters_b": 7.6,
+  "reference_active_parameters_b": 7.6,
+  "reference_model": "qwen2.5:7b",
+  "minimum_reference_b": 18.0,
+  "suite_sha256": "49c6621e30016c4465edf50fd62f6e7b34b93c2ca72be8ffddf94ffc32d1a1c6",
+  "category_regressions": {},
+  "missing_features": [],
+  "missing_benchmark_invocations": [
+    "official_retrieval",
+    "temporary_parameter_rewrite"
+  ],
+  "warning": "A benchmark score is task-scoped and is not a universal intelligence multiplier."
+}

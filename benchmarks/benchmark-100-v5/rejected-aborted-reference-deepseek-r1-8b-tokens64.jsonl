@@ -1,0 +1,6 @@
+{"id": "MMLU-01", "category": "mmlu", "expected": "B", "answer": null, "correct": false, "used": "model", "tool_trace": null, "seconds": 12.48, "raw": ""}
+{"id": "MMLU-02", "category": "mmlu", "expected": "A", "answer": null, "correct": false, "used": "model", "tool_trace": null, "seconds": 9.81, "raw": ""}
+{"id": "MMLU-03", "category": "mmlu", "expected": "D", "answer": null, "correct": false, "used": "model", "tool_trace": null, "seconds": 10.45, "raw": ""}
+{"id": "MMLU-04", "category": "mmlu", "expected": "C", "answer": null, "correct": false, "used": "model", "tool_trace": null, "seconds": 11.05, "raw": ""}
+{"id": "MMLU-05", "category": "mmlu", "expected": "A", "answer": null, "correct": false, "used": "model", "tool_trace": null, "seconds": 13.68, "raw": ""}
+{"id": "MMLU-06", "category": "mmlu", "expected": "A", "answer": null, "correct": false, "used": "model", "tool_trace": null, "seconds": 10.62, "raw": ""}

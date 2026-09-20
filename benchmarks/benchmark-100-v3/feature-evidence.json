@@ -1,0 +1,26 @@
+{
+  "official_non_scraping_retrieval": true,
+  "temporary_parameter_rewrite": true,
+  "verified_tools": true,
+  "weight_rewrite_heldout_gain": 11,
+  "suite_sha256": "6614b195138da8af925b59ae772d7f5499879b11b8197bca415a384e918c1274",
+  "base_score": 49,
+  "candidate_score": 70,
+  "category_changes": {
+    "mmlu": "12 -> 12",
+    "arc": "17 -> 17",
+    "gsm8k": "7 -> 12",
+    "computer_science": "9 -> 9",
+    "tools": "4 -> 20"
+  },
+  "inference_compute_disclosure": {
+    "base": "one 64-token-maximum model call per item",
+    "candidate_mmlu_arc": "one 64-token-maximum model call per item",
+    "candidate_gsm8k": "one up-to-192-token expression-planning call, then a restricted local arithmetic evaluator; direct 64-token fallback if parsing fails",
+    "candidate_computer_science": "one 64-token-maximum model call; an experimental council was removed after a held-out regression",
+    "candidate_tools": "deterministic local solver; no model call when recognized"
+  },
+  "routing_policy_selected_on": "benchmark-100 v1 development suite",
+  "evaluation_policy": "benchmark-100-v3 was frozen before calc-v1 and computer-science routing were evaluated",
+  "rewrite_evidence": "Separate official-web Apollo task: 18/59 untouched versus 29/59 temporary rank-8 rewrite, held-out wording and retrieval disabled. Narrow fact retention only."
+}

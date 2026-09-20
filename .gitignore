@@ -1,0 +1,28 @@
+.DS_Store
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.safetensors
+*.gguf
+*.bin
+*.key
+*.pem
+
+# Local models, temporary training data, and reversible parameter packs
+data/
+training/
+rebuild-workspace/
+reference-gpt-oss-20b-bundle/
+
+# Private test answers and generated/resumable runs
+benchmarks/quiz-1000/private-answers.jsonl
+benchmarks/**/private-answers.jsonl
+
+# Build and test output
+dist/
+build/
+.pytest_cache/
+*.egg-info/

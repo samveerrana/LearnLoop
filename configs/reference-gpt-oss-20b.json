@@ -1,0 +1,15 @@
+{
+  "model": "gpt-oss:20b",
+  "provider": "Ollama",
+  "architecture": "gptoss mixture-of-experts",
+  "total_parameters_b": 21.0,
+  "active_parameters_b": 3.6,
+  "artifact_size_decimal_gb": 14.0,
+  "weight_format": "MXFP4",
+  "license": "Apache-2.0",
+  "context_window": 131072,
+  "official_model_page": "https://ollama.com/library/gpt-oss:20b",
+  "official_upstream_model_card": "https://huggingface.co/openai/gpt-oss-20b",
+  "benchmark_policy": "Reference receives the same frozen prompts and no LearnLoop retrieval, memory, capsule, or exact tools. Temperature is zero and max output is 64 tokens.",
+  "disclosure": "This is a 21B-total MoE model with 3.6B active parameters per token; both numbers must be reported."
+}

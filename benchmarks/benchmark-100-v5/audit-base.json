@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "suite_sha256": "49c6621e30016c4465edf50fd62f6e7b34b93c2ca72be8ffddf94ffc32d1a1c6",
+  "summary": "benchmarks/benchmark-100-v5/summary-base-qwen3-4b-instruct-2507-q4_K_M-suite-49c6621e3001.json",
+  "results": "benchmarks/benchmark-100-v5/results-base-qwen3-4b-instruct-2507-q4_K_M-suite-49c6621e3001.jsonl",
+  "rows": 100,
+  "correct": 52,
+  "errors": []
+}

@@ -1,0 +1,26 @@
+{
+  "suite": "LearnLoop Benchmark 100 (benchmark-100-v5)",
+  "suite_sha256": "49c6621e30016c4465edf50fd62f6e7b34b93c2ca72be8ffddf94ffc32d1a1c6",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "backend": "ollama",
+  "adapter": null,
+  "adapter_categories": [],
+  "mode": "learnloop",
+  "correct": 38,
+  "total": 60,
+  "categories": {
+    "arc": {
+      "correct": 16,
+      "total": 20
+    },
+    "computer_science": {
+      "correct": 10,
+      "total": 20
+    },
+    "mmlu": {
+      "correct": 12,
+      "total": 20
+    }
+  },
+  "results": "benchmarks/benchmark-100-v5/results-learnloop-qwen3-4b-instruct-2507-q4_K_M-strategy-calc-v7-answer-first-vote-tokens96-suite-49c6621e3001.jsonl"
+}

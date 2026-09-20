@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "checks": {
+    "reference_is_approximately_twice_base_size": true,
+    "at_least_three_distinct_evaluations": true,
+    "candidate_matches_or_beats_reference_every_time": true,
+    "all_artifacts_verified": true
+  },
+  "base_parameters_b": 4.022,
+  "reference_parameters_b": 8.2,
+  "parameter_ratio": 2.039,
+  "comparisons": [
+    {
+      "name": "benchmark-100-v3",
+      "suite_sha256": "6614b195138da8af925b59ae772d7f5499879b11b8197bca415a384e918c1274",
+      "candidate": 73,
+      "reference": 48,
+      "total": 100,
+      "verified": true
+    },
+    {
+      "name": "benchmark-100-v5",
+      "suite_sha256": "49c6621e30016c4465edf50fd62f6e7b34b93c2ca72be8ffddf94ffc32d1a1c6",
+      "candidate": 75,
+      "reference": 43,
+      "total": 100,
+      "verified": true
+    },
+    {
+      "name": "fresh-knowledge-v1",
+      "suite_sha256": "68cdebbf8ca874023dc1a2d1fcaeb5cb5586b0df940e973dc179d1b522b289c1",
+      "candidate": 54,
+      "reference": 19,
+      "total": 59,
+      "verified": true
+    }
+  ],
+  "claim": "The LearnLoop 4B framework consistently outperformed the tested Qwen3 8.2B checkpoint on these evaluations; this is not universal 8B equivalence."
+}

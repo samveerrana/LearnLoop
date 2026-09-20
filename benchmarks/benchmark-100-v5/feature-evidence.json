@@ -1,0 +1,33 @@
+{
+  "official_non_scraping_retrieval": true,
+  "temporary_parameter_rewrite": true,
+  "verified_tools": true,
+  "weight_rewrite_heldout_gain": 11,
+  "suite_sha256": "49c6621e30016c4465edf50fd62f6e7b34b93c2ca72be8ffddf94ffc32d1a1c6",
+  "prompt_overlap_with_v3": 0,
+  "prompt_overlap_with_v4": 0,
+  "base_score": 52,
+  "candidate_score": 75,
+  "reference_7_6b_score": 42,
+  "category_changes": {
+    "mmlu": "11 -> 11",
+    "arc": "16 -> 16",
+    "gsm8k": "7 -> 16",
+    "computer_science": "12 -> 12",
+    "tools": "6 -> 20"
+  },
+  "inference_compute_disclosure": {
+    "base": "one 64-token-maximum model call per item",
+    "candidate_mmlu_arc_computer_science": "one 64-token-maximum model call per item",
+    "candidate_gsm8k": "one up-to-192-token expression-planning call, then a restricted local arithmetic evaluator; direct 64-token fallback if parsing fails",
+    "candidate_tools": "deterministic local solver; no model call when recognized"
+  },
+  "benchmark_feature_invocation": {
+    "official_retrieval": false,
+    "temporary_parameter_rewrite": false,
+    "verified_tools": true
+  },
+  "evaluation_policy": "Candidate routing was locked before benchmark-100-v5 was built. V5 excludes every prompt in v3 and v4.",
+  "rewrite_evidence": "Separate official-Wikipedia-API Apollo task: 18/59 untouched versus 29/59 temporary rank-8 rewrite, held-out wording and retrieval disabled at evaluation. This is narrow fact-retention evidence and did not cause the 75/100 benchmark score.",
+  "claim_limit": "This suite proves a task-scoped score improvement and a win over one 7.6B reference. It does not prove universal model equivalence, 10B/20B equivalence, or a general intelligence multiplier."
+}

@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:7b",
+  "provider": "Ollama",
+  "architecture": "Qwen2 dense transformer",
+  "total_parameters_b": 7.6,
+  "active_parameters_b": 7.6,
+  "artifact_size_decimal_gb": 4.7,
+  "weight_format": "Q4_K_M",
+  "license": "Apache-2.0",
+  "context_window": 32768,
+  "official_model_page": "https://ollama.com/library/qwen2.5:7b",
+  "official_upstream_model_card": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+  "benchmark_policy": "Reference received the same frozen prompts and no LearnLoop retrieval, memory, capsule, or exact tools. Temperature was zero and max output was 64 tokens.",
+  "disclosure": "This is an audited intermediate size-ladder reference, not the required approximately-20B V1 reference."
+}

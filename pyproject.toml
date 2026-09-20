@@ -1,0 +1,67 @@
+[project]
+name = "learnloop"
+version = "0.5.0"
+description = "A safe live-learning layer for local language models"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["mlx-lm>=0.29,<0.30", "safetensors>=0.4,<1", "transformers==4.51.0"]
+
+[project.scripts]
+learnloop = "learnloop.cli:main"
+learnloop-live-test = "learnloop.live_test:main"
+learnloop-benchmark = "learnloop.benchmark:main"
+learnloop-stress-test = "learnloop.stress_test:main"
+learnloop-ollama = "learnloop.ollama_chat:main"
+learnloop-make-quiz = "learnloop.quiz:main"
+learnloop-run-quiz = "learnloop.quiz_runner:main"
+learnloop-rebuild = "learnloop.rebuild:main"
+learnloop-quick-eval = "learnloop.quick_eval:main"
+learnloop-system-eval = "learnloop.system_eval:main"
+learnloop-knowledge-eval = "learnloop.knowledge_eval:main"
+learnloop-task-capsule = "learnloop.task_capsule:main"
+learnloop-web-learn = "learnloop.web_learn:main"
+learnloop-web-weight-eval = "learnloop.web_weight_eval:main"
+learnloop-web-learning-cycle = "learnloop.web_learning_cycle:main"
+learnloop-reference-preflight = "learnloop.reference_preflight:main"
+learnloop-benchmark-audit = "learnloop.benchmark_audit:main"
+learnloop-reference-run = "learnloop.reference_run:main"
+learnloop-reference-import = "learnloop.reference_import:main"
+learnloop-reference-knowledge-eval = "learnloop.reference_knowledge_eval:main"
+learnloop-composite-benchmark = "learnloop.composite_benchmark:main"
+learnloop-reference-bundle = "learnloop.reference_bundle:main"
+learnloop-rival-suite = "learnloop.rival_suite:main"
+learnloop-benchmark-100 = "learnloop.benchmark100:main"
+learnloop-release-gate = "learnloop.release_gate:main"
+learnloop-train-capsule = "learnloop.train_capsule:main"
+learnloop-start = "learnloop.terminal_pack:main"
+learnloop-experts = "learnloop.expert_cli:main"
+learnloop-mlx = "learnloop.mlx_expert_chat:main"
+learnloop-release-check = "learnloop.release_check:main"
+learnloop-official-fact-eval = "learnloop.official_fact_solver:main"
+learnloop-size-ladder-gate = "learnloop.size_ladder_gate:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+  "/.venv", "/data", "/training", "/rebuild-workspace", "/reference-gpt-oss-20b-bundle",
+  "**/__pycache__", "**/*.safetensors", "**/*.gguf", "**/*.sqlite3", "**/private-answers.jsonl",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/learnloop"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "configs", "docs", "benchmarks", "README.md", "PUBLIC_V1_CHECKLIST.md", "LICENSE", "pyproject.toml", "uv.lock"]
+exclude = ["benchmarks/**/private-answers.jsonl", "benchmarks/**/*.safetensors", "benchmarks/**/*.sqlite3"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "suite_sha256": "49c6621e30016c4465edf50fd62f6e7b34b93c2ca72be8ffddf94ffc32d1a1c6",
+  "summary": "benchmarks/benchmark-100-v5/summary-reference-qwen3-8b-suite-49c6621e3001.json",
+  "results": "benchmarks/benchmark-100-v5/results-reference-qwen3-8b-suite-49c6621e3001.jsonl",
+  "rows": 100,
+  "correct": 43,
+  "observed_features": {
+    "verified_tools": false,
+    "temporary_parameter_rewrite": false,
+    "official_retrieval": false
+  },
+  "errors": []
+}
