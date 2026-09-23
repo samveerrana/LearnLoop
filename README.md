@@ -1,8 +1,27 @@
 # LearnLoop
 
+[![Release](https://img.shields.io/github/v/release/samveerrana/LearnLoop?display_name=tag)](https://github.com/samveerrana/LearnLoop/releases/latest)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/github/license/samveerrana/LearnLoop)](LICENSE)
+
 LearnLoop is an experimental, reversible learning-and-tool layer for local language models.
 The permanent base checkpoint remains recoverable. A session may load temporary LoRA
 parameters, use verified local tools and official API retrieval, then discard the session update.
+
+## Why try it?
+
+LearnLoop combines a small local model with sourced memory, official API retrieval, verified
+calculators, correction recall, and temporary parameter experts. On three included transparent
+evaluations, the LearnLoop 4.022B framework beat the tested raw Qwen3 8.2B checkpoint:
+
+| Evaluation | LearnLoop 4B | Raw Qwen3 8B |
+| --- | ---: | ---: |
+| Benchmark v3 | **73/100** | 48/100 |
+| Benchmark v5 | **75/100** | 43/100 |
+| Fresh factual set | **54/59** | 19/59 |
+
+These are suite-specific framework results—not proof of universal 2x intelligence. Raw rows,
+suite hashes, and passing audits are included so anyone can inspect the comparison.
 
 ## Current milestone: v0.5 research prototype
 
@@ -24,7 +43,7 @@ uv sync
 uv run learnloop chat
 ```
 
-For the simplest terminal experience, start Ollama and run one command:
+For the simplest terminal experience, start Ollama and run two commands:
 
 ```bash
 uv sync --no-editable
