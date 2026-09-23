@@ -38,6 +38,15 @@ suite hashes, and passing audits are included so anyone can inspect the comparis
 
 ## Run
 
+Install the latest release directly on a Mac with Python 3.11+, `uv`, and Ollama:
+
+```bash
+uv tool install https://github.com/samveerrana/LearnLoop/releases/download/v0.5.0/learnloop-0.5.0-py3-none-any.whl
+learnloop-start
+```
+
+Or run from a source checkout:
+
 ```bash
 uv sync
 uv run learnloop chat
