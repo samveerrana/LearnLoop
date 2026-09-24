@@ -1,0 +1,100 @@
+{"id": "MMLU-01", "category": "mmlu", "expected": "C", "answer": "A", "correct": false, "used": "model", "tool_trace": null, "seconds": 2.8, "raw": "A"}
+{"id": "MMLU-02", "category": "mmlu", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.47, "raw": "D"}
+{"id": "MMLU-03", "category": "mmlu", "expected": "B", "answer": "D", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.59, "raw": "D"}
+{"id": "MMLU-04", "category": "mmlu", "expected": "A", "answer": "A", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "A"}
+{"id": "MMLU-05", "category": "mmlu", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 1.33, "raw": "C"}
+{"id": "MMLU-06", "category": "mmlu", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.59, "raw": "C"}
+{"id": "MMLU-07", "category": "mmlu", "expected": "D", "answer": "B", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "B"}
+{"id": "MMLU-08", "category": "mmlu", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "B"}
+{"id": "MMLU-09", "category": "mmlu", "expected": "A", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.73, "raw": "C"}
+{"id": "MMLU-10", "category": "mmlu", "expected": "B", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.34, "raw": "C"}
+{"id": "MMLU-11", "category": "mmlu", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "D"}
+{"id": "MMLU-12", "category": "mmlu", "expected": "A", "answer": "A", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "A"}
+{"id": "MMLU-13", "category": "mmlu", "expected": "A", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.72, "raw": "C"}
+{"id": "MMLU-14", "category": "mmlu", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "D"}
+{"id": "MMLU-15", "category": "mmlu", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "D"}
+{"id": "MMLU-16", "category": "mmlu", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.32, "raw": "D"}
+{"id": "MMLU-17", "category": "mmlu", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.87, "raw": "C"}
+{"id": "MMLU-18", "category": "mmlu", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "B"}
+{"id": "MMLU-19", "category": "mmlu", "expected": "A", "answer": "A", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "A"}
+{"id": "MMLU-20", "category": "mmlu", "expected": "A", "answer": "B", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "B"}
+{"id": "ARC-01", "category": "arc", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "C"}
+{"id": "ARC-02", "category": "arc", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.47, "raw": "B"}
+{"id": "ARC-03", "category": "arc", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.59, "raw": "B"}
+{"id": "ARC-04", "category": "arc", "expected": "C", "answer": "D", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "D"}
+{"id": "ARC-05", "category": "arc", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "B"}
+{"id": "ARC-06", "category": "arc", "expected": "B", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "C"}
+{"id": "ARC-07", "category": "arc", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "C"}
+{"id": "ARC-08", "category": "arc", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.6, "raw": "D"}
+{"id": "ARC-09", "category": "arc", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.45, "raw": "D"}
+{"id": "ARC-10", "category": "arc", "expected": "A", "answer": "A", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "A"}
+{"id": "ARC-11", "category": "arc", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "B"}
+{"id": "ARC-12", "category": "arc", "expected": "A", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.68, "raw": "C"}
+{"id": "ARC-13", "category": "arc", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.47, "raw": "D"}
+{"id": "ARC-14", "category": "arc", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.47, "raw": "B"}
+{"id": "ARC-15", "category": "arc", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "D"}
+{"id": "ARC-16", "category": "arc", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.59, "raw": "D"}
+{"id": "ARC-17", "category": "arc", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.93, "raw": "C"}
+{"id": "ARC-18", "category": "arc", "expected": "A", "answer": "A", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.33, "raw": "A"}
+{"id": "ARC-19", "category": "arc", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.46, "raw": "C"}
+{"id": "ARC-20", "category": "arc", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.34, "raw": "B"}
+{"id": "GSM8K-01", "category": "gsm8k", "expected": "64", "answer": "64", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(5 * 16) - (5 * 8) * (1 - 0.6)</calc>"}, "seconds": 1.72, "raw": "64"}
+{"id": "GSM8K-02", "category": "gsm8k", "expected": "460", "answer": "460", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(40 * 10) + (5 * 10 * 1.2)</calc>"}, "seconds": 1.38, "raw": "460"}
+{"id": "GSM8K-03", "category": "gsm8k", "expected": "694", "answer": "694", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(3 * 68) + (2 * 80) + (6 * 55)</calc>"}, "seconds": 1.55, "raw": "694"}
+{"id": "GSM8K-04", "category": "gsm8k", "expected": "230", "answer": "230", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(80 + 150)</calc>"}, "seconds": 0.8, "raw": "230"}
+{"id": "GSM8K-05", "category": "gsm8k", "expected": "7", "answer": "7", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(3 * 4 * 7) / 12</calc>"}, "seconds": 0.99, "raw": "7"}
+{"id": "GSM8K-06", "category": "gsm8k", "expected": "8", "answer": "8", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(5 - 1) * 2</calc>"}, "seconds": 0.84, "raw": "8"}
+{"id": "GSM8K-07", "category": "gsm8k", "expected": "70", "answer": "70", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(110 + 30) / 2</calc>"}, "seconds": 0.95, "raw": "70"}
+{"id": "GSM8K-08", "category": "gsm8k", "expected": "18", "answer": "6", "correct": false, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(1/3)*4*(3) + (2/3)*3</calc>"}, "seconds": 1.25, "raw": "6"}
+{"id": "GSM8K-09", "category": "gsm8k", "expected": "104", "answer": "44", "correct": false, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(5 + (2/5)*5 + 2*(2/5)*5) * 4</calc>"}, "seconds": 1.67, "raw": "44"}
+{"id": "GSM8K-10", "category": "gsm8k", "expected": "40", "answer": "40", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(7 + 3*7 + 12)</calc>"}, "seconds": 1.09, "raw": "40"}
+{"id": "GSM8K-11", "category": "gsm8k", "expected": "83", "answer": "83", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(5000 - 3755) / 15</calc>"}, "seconds": 1.26, "raw": "83"}
+{"id": "GSM8K-12", "category": "gsm8k", "expected": "57", "answer": "57", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>40.00 * (1 + 0.25) + 3.00 + 4.00</calc>"}, "seconds": 1.77, "raw": "57"}
+{"id": "GSM8K-13", "category": "gsm8k", "expected": "1596", "answer": "798", "correct": false, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(140 * 6) - (140 * 0.1 * 3)</calc>"}, "seconds": 1.54, "raw": "798"}
+{"id": "GSM8K-14", "category": "gsm8k", "expected": "36", "answer": "24", "correct": false, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(60 * 2) / 5</calc>"}, "seconds": 0.93, "raw": "24"}
+{"id": "GSM8K-15", "category": "gsm8k", "expected": "60", "answer": "60", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(16 + (16*2) + (16*4) + (16*8)) / 4</calc>"}, "seconds": 1.76, "raw": "60"}
+{"id": "GSM8K-16", "category": "gsm8k", "expected": "100", "answer": "-50", "correct": false, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(400 / 4 / 2) - (400 / 4)</calc>"}, "seconds": 1.3, "raw": "-50"}
+{"id": "GSM8K-17", "category": "gsm8k", "expected": "70", "answer": "70", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>100 * (1 - 0.30)</calc>"}, "seconds": 1.06, "raw": "70"}
+{"id": "GSM8K-18", "category": "gsm8k", "expected": "10", "answer": "14", "correct": false, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(24 * (1/6) * 2) + 6</calc>"}, "seconds": 1.18, "raw": "14"}
+{"id": "GSM8K-19", "category": "gsm8k", "expected": "8000", "answer": "8000", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(88000 / (1 + 10))</calc>"}, "seconds": 1.1, "raw": "8000"}
+{"id": "GSM8K-20", "category": "gsm8k", "expected": "12", "answer": "12", "correct": true, "used": "model-planned-verified-calculator", "tool_trace": {"planner_output": "<calc>(32 / (1/2)) / 16 * 3</calc>"}, "seconds": 1.32, "raw": "12"}
+{"id": "COMPUTER_SCIENCE-01", "category": "computer_science", "expected": "B", "answer": "D", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.53, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-02", "category": "computer_science", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 1.18, "raw": "C"}
+{"id": "COMPUTER_SCIENCE-03", "category": "computer_science", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.67, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-04", "category": "computer_science", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.52, "raw": "B"}
+{"id": "COMPUTER_SCIENCE-05", "category": "computer_science", "expected": "A", "answer": "B", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.52, "raw": "B"}
+{"id": "COMPUTER_SCIENCE-06", "category": "computer_science", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 1.31, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-07", "category": "computer_science", "expected": "C", "answer": "A", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.52, "raw": "A"}
+{"id": "COMPUTER_SCIENCE-08", "category": "computer_science", "expected": "D", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 0.68, "raw": "C"}
+{"id": "COMPUTER_SCIENCE-09", "category": "computer_science", "expected": "B", "answer": "B", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.71, "raw": "B"}
+{"id": "COMPUTER_SCIENCE-10", "category": "computer_science", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.56, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-11", "category": "computer_science", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.38, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-12", "category": "computer_science", "expected": "A", "answer": "C", "correct": false, "used": "model", "tool_trace": null, "seconds": 1.17, "raw": "C"}
+{"id": "COMPUTER_SCIENCE-13", "category": "computer_science", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.55, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-14", "category": "computer_science", "expected": "A", "answer": "B", "correct": false, "used": "model", "tool_trace": null, "seconds": 1.05, "raw": "B"}
+{"id": "COMPUTER_SCIENCE-15", "category": "computer_science", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.73, "raw": "C"}
+{"id": "COMPUTER_SCIENCE-16", "category": "computer_science", "expected": "A", "answer": "A", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.55, "raw": "A"}
+{"id": "COMPUTER_SCIENCE-17", "category": "computer_science", "expected": "B", "answer": "D", "correct": false, "used": "model", "tool_trace": null, "seconds": 1.21, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-18", "category": "computer_science", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 1.17, "raw": "C"}
+{"id": "COMPUTER_SCIENCE-19", "category": "computer_science", "expected": "D", "answer": "D", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.86, "raw": "D"}
+{"id": "COMPUTER_SCIENCE-20", "category": "computer_science", "expected": "C", "answer": "C", "correct": true, "used": "model", "tool_trace": null, "seconds": 0.67, "raw": "C"}
+{"id": "TOOLS-01", "category": "tools", "expected": "501", "answer": "501", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "501"}
+{"id": "TOOLS-02", "category": "tools", "expected": "22631", "answer": "22631", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "22631"}
+{"id": "TOOLS-03", "category": "tools", "expected": "522", "answer": "522", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "522"}
+{"id": "TOOLS-04", "category": "tools", "expected": "4122", "answer": "4122", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "4122"}
+{"id": "TOOLS-05", "category": "tools", "expected": "21", "answer": "21", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "21"}
+{"id": "TOOLS-06", "category": "tools", "expected": "17216", "answer": "17216", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "17216"}
+{"id": "TOOLS-07", "category": "tools", "expected": "11", "answer": "11", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "11"}
+{"id": "TOOLS-08", "category": "tools", "expected": "6354", "answer": "6354", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "6354"}
+{"id": "TOOLS-09", "category": "tools", "expected": "8597", "answer": "8597", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "8597"}
+{"id": "TOOLS-10", "category": "tools", "expected": "10", "answer": "10", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "10"}
+{"id": "TOOLS-11", "category": "tools", "expected": "10201", "answer": "10201", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "10201"}
+{"id": "TOOLS-12", "category": "tools", "expected": "130", "answer": "130", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "130"}
+{"id": "TOOLS-13", "category": "tools", "expected": "24", "answer": "24", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "24"}
+{"id": "TOOLS-14", "category": "tools", "expected": "8591", "answer": "8591", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "8591"}
+{"id": "TOOLS-15", "category": "tools", "expected": "67", "answer": "67", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "67"}
+{"id": "TOOLS-16", "category": "tools", "expected": "20", "answer": "20", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "20"}
+{"id": "TOOLS-17", "category": "tools", "expected": "4124", "answer": "4124", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "4124"}
+{"id": "TOOLS-18", "category": "tools", "expected": "67", "answer": "67", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "67"}
+{"id": "TOOLS-19", "category": "tools", "expected": "367", "answer": "367", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "367"}
+{"id": "TOOLS-20", "category": "tools", "expected": "821", "answer": "821", "correct": true, "used": "verified-local-tool", "tool_trace": null, "seconds": 0.0, "raw": "821"}

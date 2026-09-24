@@ -172,6 +172,13 @@ reference's task score. All three raw runs pass independent audits. Temporary pa
 rewriting and official retrieval are separately verified capabilities; they were not invoked
 to produce the 75/100 score, which came from arithmetic planning plus verified tools.
 
+A later non-overlapping v6 consistency suite, SHA-256
+`94ee797253a8f59de84d18c2a40ea8cf100a511875efe59762ab52af12aa84f8`, scored **54/100**
+for the untouched 4B model and **77/100** for the same locked LearnLoop strategy. Every category
+matched or improved: MMLU 13→13, ARC 17→17, GSM8K 3→14, computer science 13→13, and
+exact tools 8→20. Both raw runs pass the included independent audit. The gain still comes from
+verified arithmetic/tool execution; it does not prove 32B-level general reasoning.
+
 The integrated 159-case evaluation at `benchmarks/integrated-v1-7b` combines that untouched
 100-case core with 59 held-out phrasings of facts learned from the official Wikipedia API.
 Untouched 4B weights scored 70/159, LearnLoop scored 104/159, and Qwen2.5 7.6B scored

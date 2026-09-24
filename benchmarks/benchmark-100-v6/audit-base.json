@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "suite_sha256": "94ee797253a8f59de84d18c2a40ea8cf100a511875efe59762ab52af12aa84f8",
+  "summary": "benchmarks/benchmark-100-v6/summary-base-qwen3-4b-instruct-2507-q4_K_M-suite-94ee797253a8.json",
+  "results": "benchmarks/benchmark-100-v6/results-base-qwen3-4b-instruct-2507-q4_K_M-suite-94ee797253a8.jsonl",
+  "rows": 100,
+  "correct": 54,
+  "observed_features": {
+    "verified_tools": false,
+    "temporary_parameter_rewrite": false,
+    "official_retrieval": false
+  },
+  "errors": []
+}
