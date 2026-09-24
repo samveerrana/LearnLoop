@@ -8,7 +8,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .reference_preflight import assess, physical_memory_bytes
+from .reference_preflight import physical_memory_bytes
 
 
 BUNDLE_FILES = (
@@ -22,6 +22,18 @@ BUNDLE_FILES = (
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def execution_safety(manifest: dict, free_bytes: int, physical_bytes: int) -> dict:
+    minimum_memory = int(float(manifest.get("minimum_physical_memory_gib", 24)) * 1024**3)
+    minimum_disk = int(float(manifest.get("minimum_free_disk_gib", 5)) * 1024**3)
+    return {
+        "safe": physical_bytes >= minimum_memory and free_bytes >= minimum_disk,
+        "physical_memory_bytes": physical_bytes,
+        "minimum_physical_memory_bytes": minimum_memory,
+        "free_bytes": free_bytes,
+        "minimum_free_disk_bytes": minimum_disk,
+    }
 
 
 def verify_bundle(bundle: Path) -> dict:
@@ -51,12 +63,18 @@ def verify_bundle(bundle: Path) -> dict:
 
 
 def create_bundle(suite: Path, knowledge_cases: Path, reference_manifest: Path, output: Path) -> dict:
-    safety = assess(shutil.disk_usage(output.parent).free, physical_bytes=physical_memory_bytes())
-    if not safety["safe_to_run_locally"]:
-        raise RuntimeError(
-            f"refusing reference job on {safety['physical_memory_bytes'] / 1024**3:.1f} GiB RAM; 24 GiB required"
-        )
     manifest = json.loads(reference_manifest.read_text(encoding="utf-8"))
+    safety = execution_safety(
+        manifest, shutil.disk_usage(output.parent).free, physical_memory_bytes()
+    )
+    if not safety["safe"]:
+        raise RuntimeError(
+            "refusing reference job: "
+            f"{safety['physical_memory_bytes'] / 1024**3:.1f} GiB RAM available, "
+            f"{safety['minimum_physical_memory_bytes'] / 1024**3:.1f} GiB required; "
+            f"{safety['free_bytes'] / 1024**3:.1f} GiB disk free, "
+            f"{safety['minimum_free_disk_bytes'] / 1024**3:.1f} GiB required"
+        )
     model = manifest["model"]
     subprocess.run([
         sys.executable, "-m", "learnloop.reference_run", "--suite", str(suite),

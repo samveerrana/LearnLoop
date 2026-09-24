@@ -1,0 +1,18 @@
+{
+  "model": "qwen3:32b-q4_K_M",
+  "provider": "Ollama",
+  "architecture": "Qwen3 dense transformer",
+  "total_parameters_b": 32.8,
+  "active_parameters_b": 32.8,
+  "artifact_size_decimal_gb": 20.0,
+  "weight_format": "Q4_K_M",
+  "license": "Apache-2.0",
+  "context_window": 40960,
+  "minimum_physical_memory_gib": 48,
+  "minimum_free_disk_gib": 10,
+  "official_model_page": "https://ollama.com/library/qwen3:32b",
+  "official_upstream_model_card": "https://huggingface.co/Qwen/Qwen3-32B",
+  "benchmark_policy": "Reference receives the same frozen prompts and no LearnLoop retrieval, memory, capsule, or exact tools. Temperature is zero, the output budget is recorded, and every raw row is retained.",
+  "execution_policy": "Run externally on a machine with enough memory. Do not pull or run this 20 GB artifact on the 16 GB development Mac.",
+  "disclosure": "Qwen3-32B is a dense 32.8B-parameter model. The milestone is suite-scoped and does not establish universal 30B equivalence."
+}

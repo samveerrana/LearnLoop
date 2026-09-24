@@ -1,6 +1,12 @@
 import json
 
-from learnloop.reference_bundle import BUNDLE_FILES, sha256, verify_bundle
+from learnloop.reference_bundle import BUNDLE_FILES, execution_safety, sha256, verify_bundle
+
+
+def test_model_specific_execution_safety() -> None:
+    manifest = {"minimum_physical_memory_gib": 48, "minimum_free_disk_gib": 10}
+    assert not execution_safety(manifest, 20 * 1024**3, 16 * 1024**3)["safe"]
+    assert execution_safety(manifest, 10 * 1024**3, 48 * 1024**3)["safe"]
 
 
 def make_bundle(tmp_path):

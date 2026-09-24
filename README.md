@@ -215,6 +215,28 @@ hidden reasoning until the output cap and produced no final answer in the fast e
 with thinking disabled. Those aborted rows are retained as rejected evidence rather than being
 miscounted as wrong answers.
 
+### Next milestone: dense Qwen3-32B
+
+The next size-ladder reference is Qwen3-32B: a dense 32.8B-parameter checkpoint, not the
+30B-A3B mixture-of-experts model. LearnLoop does not claim this milestone yet. The reference
+must answer the same frozen prompts on an external machine, and every raw row must pass the
+local audit. The manifest requires at least 48 GiB physical memory and 10 GiB free disk, so the
+job is refused on the 16 GiB development Mac.
+
+On the stronger machine, after installing Ollama and `qwen3:32b-q4_K_M`, run:
+
+```bash
+.venv/bin/learnloop-reference-bundle \
+  --create qwen3-32b-bundle \
+  --suite benchmarks/benchmark-100-v5/suite.json \
+  --knowledge-cases benchmarks/fresh-knowledge-v1/cases.json \
+  --reference-manifest configs/reference-qwen3-32b.json
+```
+
+The 30B release gate must be invoked with `--minimum-reference-b 30`; a 20B or smaller
+reference cannot satisfy it. Passing remains suite-specific evidence, never a universal
+intelligence multiplier.
+
 Run the full gated lifecycle with one command. It retrieves through the official API,
 scores untouched weights, trains and scores temporary weights, accepts only a positive
 gain, and deletes the source copy and capsule by default. Add `--keep-capsule` only when

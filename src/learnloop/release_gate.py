@@ -42,7 +42,7 @@ def evaluate_gate(
         for name in ("official_model_page", "official_upstream_model_card")
     )
     checks = {
-        "real_approximately_20b_reference": reference_parameters_b >= minimum_reference_b,
+        "reference_meets_parameter_threshold": reference_parameters_b >= minimum_reference_b,
         "reference_identity_matches_manifest": reference.get("model") == reference_manifest.get("model"),
         "official_reference_provenance": official_reference_provenance,
         "all_raw_runs_independently_audited": audits_pass,
@@ -80,11 +80,16 @@ def main() -> None:
     parser.add_argument("--reference-audit", type=Path, required=True)
     parser.add_argument("--features", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--minimum-reference-b", type=float, default=18.0,
+        help="Minimum total parameter count, in billions, required of the reference model",
+    )
     args = parser.parse_args()
     load = lambda path: json.loads(path.read_text(encoding="utf-8"))
     result = evaluate_gate(
         load(args.base), load(args.candidate), load(args.reference), load(args.reference_manifest),
         load(args.features), [load(args.base_audit), load(args.candidate_audit), load(args.reference_audit)],
+        minimum_reference_b=args.minimum_reference_b,
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2), encoding="utf-8")

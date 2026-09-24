@@ -36,7 +36,24 @@ def audits() -> list[dict]:
 def test_rejects_small_reference_even_when_score_wins() -> None:
     result = evaluate_gate(summary(50), summary(80), summary(60), manifest(7), features(), audits())
     assert not result["passed"]
-    assert not result["checks"]["real_approximately_20b_reference"]
+    assert not result["checks"]["reference_meets_parameter_threshold"]
+
+
+def test_30b_gate_rejects_21b_reference() -> None:
+    result = evaluate_gate(
+        summary(50), summary(80), summary(60), manifest(21), features(), audits(),
+        minimum_reference_b=30,
+    )
+    assert not result["passed"]
+    assert not result["checks"]["reference_meets_parameter_threshold"]
+
+
+def test_30b_gate_accepts_complete_32b_evidence() -> None:
+    reference_manifest = manifest(32.8)
+    assert evaluate_gate(
+        summary(50), summary(80), summary(75), reference_manifest, features(), audits(),
+        minimum_reference_b=30,
+    )["passed"]
 
 
 def test_rejects_category_regression() -> None:
