@@ -217,6 +217,8 @@ miscounted as wrong answers.
 
 ### Next milestone: dense Qwen3-32B
 
+[![Open the audited 32B runner in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samveerrana/LearnLoop/blob/main/notebooks/qwen3_32b_reference_colab.ipynb)
+
 The next size-ladder reference is Qwen3-32B: a dense 32.8B-parameter checkpoint, not the
 30B-A3B mixture-of-experts model. LearnLoop does not claim this milestone yet. The reference
 must answer the same frozen prompts on an external machine, and every raw row must pass the
