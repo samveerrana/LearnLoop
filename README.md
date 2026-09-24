@@ -179,6 +179,11 @@ matched or improved: MMLU 13→13, ARC 17→17, GSM8K 3→14, computer science 1
 exact tools 8→20. Both raw runs pass the included independent audit. The gain still comes from
 verified arithmetic/tool execution; it does not prove 32B-level general reasoning.
 
+Two v6 development experiments were rejected and retained for transparency. Generic Wikipedia
+evidence scored 25/40 on MMLU plus computer science versus the prior 26/40 (three gains and four
+regressions). A second-pass arithmetic critic scored 13/20 versus the proven planner's 14/20.
+Neither strategy was promoted.
+
 The integrated 159-case evaluation at `benchmarks/integrated-v1-7b` combines that untouched
 100-case core with 59 held-out phrasings of facts learned from the official Wikipedia API.
 Untouched 4B weights scored 70/159, LearnLoop scored 104/159, and Qwen2.5 7.6B scored

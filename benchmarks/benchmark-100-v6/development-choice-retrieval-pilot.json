@@ -1,0 +1,462 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "method": "official Wikipedia API evidence on all MMLU and computer-science choices",
+  "development_only": true,
+  "prior_correct": 26,
+  "correct": 25,
+  "total": 40,
+  "gains": 3,
+  "regressions": 4,
+  "rows": [
+    {
+      "id": "MMLU-01",
+      "category": "mmlu",
+      "expected": "C",
+      "prior_answer": "A",
+      "prior_correct": false,
+      "answer": "A",
+      "correct": false,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "MMLU-02",
+      "category": "mmlu",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "MMLU-03",
+      "category": "mmlu",
+      "expected": "B",
+      "prior_answer": "D",
+      "prior_correct": false,
+      "answer": "D",
+      "correct": false,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "MMLU-04",
+      "category": "mmlu",
+      "expected": "A",
+      "prior_answer": "A",
+      "prior_correct": true,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "MMLU-05",
+      "category": "mmlu",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "C",
+      "correct": true,
+      "sources": [],
+      "raw": "C. 1:6"
+    },
+    {
+      "id": "MMLU-06",
+      "category": "mmlu",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "C",
+      "correct": true,
+      "sources": [],
+      "raw": "C. (I) and (IV)"
+    },
+    {
+      "id": "MMLU-07",
+      "category": "mmlu",
+      "expected": "D",
+      "prior_answer": "B",
+      "prior_correct": false,
+      "answer": "B",
+      "correct": false,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "MMLU-08",
+      "category": "mmlu",
+      "expected": "B",
+      "prior_answer": "B",
+      "prior_correct": true,
+      "answer": "B",
+      "correct": true,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "MMLU-09",
+      "category": "mmlu",
+      "expected": "A",
+      "prior_answer": "C",
+      "prior_correct": false,
+      "answer": "D",
+      "correct": false,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "MMLU-10",
+      "category": "mmlu",
+      "expected": "B",
+      "prior_answer": "C",
+      "prior_correct": false,
+      "answer": "C",
+      "correct": false,
+      "sources": [],
+      "raw": "C. 27%"
+    },
+    {
+      "id": "MMLU-11",
+      "category": "mmlu",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "MMLU-12",
+      "category": "mmlu",
+      "expected": "A",
+      "prior_answer": "A",
+      "prior_correct": true,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "MMLU-13",
+      "category": "mmlu",
+      "expected": "A",
+      "prior_answer": "C",
+      "prior_correct": false,
+      "answer": "C",
+      "correct": false,
+      "sources": [],
+      "raw": "C"
+    },
+    {
+      "id": "MMLU-14",
+      "category": "mmlu",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "B",
+      "correct": false,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "MMLU-15",
+      "category": "mmlu",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hierarchical_organization",
+        "https://en.wikipedia.org/wiki/Division_of_labour"
+      ],
+      "raw": "D"
+    },
+    {
+      "id": "MMLU-16",
+      "category": "mmlu",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Preimplantation_genetic_diagnosis"
+      ],
+      "raw": "D"
+    },
+    {
+      "id": "MMLU-17",
+      "category": "mmlu",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "C",
+      "correct": true,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Civil_discourse"
+      ],
+      "raw": "C"
+    },
+    {
+      "id": "MMLU-18",
+      "category": "mmlu",
+      "expected": "B",
+      "prior_answer": "B",
+      "prior_correct": true,
+      "answer": null,
+      "correct": false,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Technology",
+        "https://en.wikipedia.org/wiki/Hunting"
+      ],
+      "raw": "The provided evidence does not mention the Minoan economy or its vulnerabilities to natural catastrophe. Therefore, based solely on the given sources, there is no direct information to support any of the answer choices.\n\nHowever, since the question asks to answer based on the evidence provided, and no evidence supports any of the options, the correct response must be determined by inference or known historical facts\u2014**but only if the evidence supports it**.\n\nSince the evidence does not mention agriculture, maritime trade, metalworking, or slave labor in relation to the Minoan economy, **none of the options can be supported by the provided evidence**.\n\nThus,"
+    },
+    {
+      "id": "MMLU-19",
+      "category": "mmlu",
+      "expected": "A",
+      "prior_answer": "A",
+      "prior_correct": true,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "MMLU-20",
+      "category": "mmlu",
+      "expected": "A",
+      "prior_answer": "B",
+      "prior_correct": false,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-01",
+      "category": "computer_science",
+      "expected": "B",
+      "prior_answer": "D",
+      "prior_correct": false,
+      "answer": "D",
+      "correct": false,
+      "sources": [],
+      "raw": "D. I and III"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-02",
+      "category": "computer_science",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "C",
+      "correct": true,
+      "sources": [],
+      "raw": "C"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-03",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "B",
+      "correct": false,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-04",
+      "category": "computer_science",
+      "expected": "B",
+      "prior_answer": "B",
+      "prior_correct": true,
+      "answer": "B",
+      "correct": true,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-05",
+      "category": "computer_science",
+      "expected": "A",
+      "prior_answer": "B",
+      "prior_correct": false,
+      "answer": "B",
+      "correct": false,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-06",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D. II and III only"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-07",
+      "category": "computer_science",
+      "expected": "C",
+      "prior_answer": "A",
+      "prior_correct": false,
+      "answer": "A",
+      "correct": false,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-08",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "C",
+      "prior_correct": false,
+      "answer": "C",
+      "correct": false,
+      "sources": [],
+      "raw": "C"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-09",
+      "category": "computer_science",
+      "expected": "B",
+      "prior_answer": "B",
+      "prior_correct": true,
+      "answer": "B",
+      "correct": true,
+      "sources": [],
+      "raw": "B"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-10",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-11",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-12",
+      "category": "computer_science",
+      "expected": "A",
+      "prior_answer": "C",
+      "prior_correct": false,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-13",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-14",
+      "category": "computer_science",
+      "expected": "A",
+      "prior_answer": "B",
+      "prior_correct": false,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-15",
+      "category": "computer_science",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "C",
+      "correct": true,
+      "sources": [],
+      "raw": "C"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-16",
+      "category": "computer_science",
+      "expected": "A",
+      "prior_answer": "A",
+      "prior_correct": true,
+      "answer": "A",
+      "correct": true,
+      "sources": [],
+      "raw": "A"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-17",
+      "category": "computer_science",
+      "expected": "B",
+      "prior_answer": "D",
+      "prior_correct": false,
+      "answer": "D",
+      "correct": false,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-18",
+      "category": "computer_science",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": false,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-19",
+      "category": "computer_science",
+      "expected": "D",
+      "prior_answer": "D",
+      "prior_correct": true,
+      "answer": "D",
+      "correct": true,
+      "sources": [],
+      "raw": "D"
+    },
+    {
+      "id": "COMPUTER_SCIENCE-20",
+      "category": "computer_science",
+      "expected": "C",
+      "prior_answer": "C",
+      "prior_correct": true,
+      "answer": "C",
+      "correct": true,
+      "sources": [],
+      "raw": "C"
+    }
+  ]
+}
