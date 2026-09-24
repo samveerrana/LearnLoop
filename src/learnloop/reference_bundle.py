@@ -24,13 +24,43 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def execution_safety(manifest: dict, free_bytes: int, physical_bytes: int) -> dict:
+def accelerator_memory_bytes() -> int:
+    command = shutil.which("nvidia-smi")
+    if not command:
+        return 0
+    result = subprocess.run(
+        [command, "--query-gpu=memory.total", "--format=csv,noheader,nounits"],
+        capture_output=True, text=True,
+    )
+    if result.returncode:
+        return 0
+    values = [int(line.strip()) for line in result.stdout.splitlines() if line.strip().isdigit()]
+    return max(values, default=0) * 1024**2
+
+
+def execution_safety(
+    manifest: dict, free_bytes: int, physical_bytes: int, accelerator_bytes: int = 0,
+) -> dict:
     minimum_memory = int(float(manifest.get("minimum_physical_memory_gib", 24)) * 1024**3)
     minimum_disk = int(float(manifest.get("minimum_free_disk_gib", 5)) * 1024**3)
+    minimum_accelerator = int(float(manifest.get("minimum_accelerator_memory_gib", 0)) * 1024**3)
+    minimum_host_with_accelerator = int(
+        float(manifest.get("minimum_host_memory_with_accelerator_gib", minimum_memory / 1024**3)) * 1024**3
+    )
+    minimum_combined = int(
+        float(manifest.get("minimum_combined_memory_gib", minimum_memory / 1024**3)) * 1024**3
+    )
+    dedicated_accelerator_ok = (
+        accelerator_bytes >= minimum_accelerator
+        and physical_bytes >= minimum_host_with_accelerator
+        and accelerator_bytes + physical_bytes >= minimum_combined
+    ) if minimum_accelerator else False
     return {
-        "safe": physical_bytes >= minimum_memory and free_bytes >= minimum_disk,
+        "safe": (physical_bytes >= minimum_memory or dedicated_accelerator_ok) and free_bytes >= minimum_disk,
         "physical_memory_bytes": physical_bytes,
         "minimum_physical_memory_bytes": minimum_memory,
+        "accelerator_memory_bytes": accelerator_bytes,
+        "dedicated_accelerator_path": dedicated_accelerator_ok,
         "free_bytes": free_bytes,
         "minimum_free_disk_bytes": minimum_disk,
     }
@@ -65,13 +95,15 @@ def verify_bundle(bundle: Path) -> dict:
 def create_bundle(suite: Path, knowledge_cases: Path, reference_manifest: Path, output: Path) -> dict:
     manifest = json.loads(reference_manifest.read_text(encoding="utf-8"))
     safety = execution_safety(
-        manifest, shutil.disk_usage(output.parent).free, physical_memory_bytes()
+        manifest, shutil.disk_usage(output.parent).free, physical_memory_bytes(),
+        accelerator_memory_bytes(),
     )
     if not safety["safe"]:
         raise RuntimeError(
             "refusing reference job: "
             f"{safety['physical_memory_bytes'] / 1024**3:.1f} GiB RAM available, "
             f"{safety['minimum_physical_memory_bytes'] / 1024**3:.1f} GiB required; "
+            f"{safety['accelerator_memory_bytes'] / 1024**3:.1f} GiB accelerator memory; "
             f"{safety['free_bytes'] / 1024**3:.1f} GiB disk free, "
             f"{safety['minimum_free_disk_bytes'] / 1024**3:.1f} GiB required"
         )

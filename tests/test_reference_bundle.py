@@ -4,9 +4,19 @@ from learnloop.reference_bundle import BUNDLE_FILES, execution_safety, sha256, v
 
 
 def test_model_specific_execution_safety() -> None:
-    manifest = {"minimum_physical_memory_gib": 48, "minimum_free_disk_gib": 10}
+    manifest = {
+        "minimum_physical_memory_gib": 48,
+        "minimum_accelerator_memory_gib": 15,
+        "minimum_host_memory_with_accelerator_gib": 12,
+        "minimum_combined_memory_gib": 27,
+        "minimum_free_disk_gib": 10,
+    }
     assert not execution_safety(manifest, 20 * 1024**3, 16 * 1024**3)["safe"]
     assert execution_safety(manifest, 10 * 1024**3, 48 * 1024**3)["safe"]
+    cloud = execution_safety(
+        manifest, 10 * 1024**3, 12 * 1024**3, accelerator_bytes=15 * 1024**3,
+    )
+    assert cloud["safe"] and cloud["dedicated_accelerator_path"]
 
 
 def make_bundle(tmp_path):
