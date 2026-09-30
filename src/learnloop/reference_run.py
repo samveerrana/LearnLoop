@@ -10,7 +10,8 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from .reference_preflight import assess, physical_memory_bytes
+from .reference_bundle import accelerator_memory_bytes, execution_safety
+from .reference_preflight import physical_memory_bytes
 
 
 def safe_name(model: str) -> str:
@@ -24,16 +25,20 @@ def main() -> None:
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     model = manifest["model"]
-    safety = assess(
+    safety = execution_safety(
+        manifest,
         shutil.disk_usage(args.suite.resolve().parent).free,
-        physical_bytes=physical_memory_bytes(),
+        physical_memory_bytes(),
+        accelerator_memory_bytes(),
     )
-    if not safety["safe_to_run_locally"]:
+    if not safety["safe"]:
         raise SystemExit(
-            "refusing unsafe local reference run: this machine has "
+            "refusing unsafe reference run: this machine has "
             f"{safety['physical_memory_bytes'] / 1024**3:.1f} GiB RAM; LearnLoop requires "
-            "24 GiB after an observed 16 GiB system destabilization. Run on a stronger machine "
-            "and import the raw result bundle instead."
+            f"{safety['minimum_physical_memory_bytes'] / 1024**3:.1f} GiB without an accelerator, "
+            f"or the manifest's approved split path. Detected accelerator memory: "
+            f"{safety['accelerator_memory_bytes'] / 1024**3:.1f} GiB. Run on a stronger machine "
+            "or approved cloud accelerator and import the raw result bundle instead."
         )
     # Import the ML stack only after the memory guard passes. This keeps an unsafe
     # 16 GiB preflight lightweight and avoids mapping model libraries unnecessarily.
